@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <>
       <div className="relative flex">
-        <div className="w-20 min-h-screen bg-[#ffa500]">
+        <div className="w-20 min-h-full bg-[#ffa500]">
           <div className="flex flex-col items-center gap-4 mt-20">
             <button>
               <svg
@@ -110,7 +110,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="relative flex-grow">
+        <div className="relative flex-grow pb-20">
           <div className="absolute top-8 left-8">
             <img src="/logo.png" alt="logo" />
           </div>
@@ -157,7 +157,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="w-20 min-h-screen bg-black hidden xl:block"></div>
+        <div className="w-20 min-h-full bg-black hidden xl:block"></div>
       </div>
     </>
   );
