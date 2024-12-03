@@ -4,3 +4,12 @@
   font-weight: 300;
   font-style: normal;
 }
+
+.carousel__dot {
+  background-color: #333;
+  transition: background-color 0.3s;
+}
+
+.carousel__dot--selected {
+  background-color: #ffa500;
+}

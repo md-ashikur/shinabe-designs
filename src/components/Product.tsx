@@ -1,3 +1,8 @@
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 export default function Product() {
   return (
     <>
@@ -27,14 +32,34 @@ export default function Product() {
                 <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
                   Brief
                 </h5>
-                <p className="text-white text-sm mt-1">
-                  Once we determine the type of helmet you want/need...
-                </p>
-                <div>
-                  <button className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2">
-                    Read more
-                  </button>
-                </div>
+                <Disclosure>
+                  <DisclosurePanel className="text-gray-300 mt-2 text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium voluptates itaque veniam? Nulla fugiat aliquam
+                    ullam, magni incidunt aperiam corporis ipsam odio fuga quia.
+                    Ducimus commodi repudiandae tenetur nisi aliquam eaque
+                    beatae iste explicabo aut, repellendus sequi? Adipisci
+                    assumenda, dolore expedita sapiente voluptate ipsum vero
+                    magni temporibus! Asperiores, in odit!
+                  </DisclosurePanel>
+                  <DisclosureButton className="group py-2 flex w-full items-center justify-between">
+                    <div className="flex flex-col">
+                      <p className="text-white text-start text-sm mt-1 group-data-[open]:hidden">
+                        Once we determine the type of helmet you want/need...
+                      </p>
+                      <div>
+                        <button className="border-[2px] flex items-center text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2">
+                          <span className="group-data-[open]:hidden">
+                            Read more
+                          </span>
+                          <span className="hidden group-data-[open]:inline">
+                            Read less
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </DisclosureButton>
+                </Disclosure>
               </div>
             </div>
             <div className="bg-[#111111] p-2 rounded-3xl">

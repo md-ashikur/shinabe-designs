@@ -11,12 +11,17 @@ export default function Footer() {
             <div className="bg-[#ffae19] min-h-80 pt-8">
               <div className="space-y-3">
                 <p className="text-center text-lg text-white">Contact Us</p>
+                <div className="flex justify-center">
+                  <a href="https://wa.me/6285722338836" target="_blank">
+                    <img src="/wp.png" className="w-40 rounded-lg" />
+                  </a>
+                </div>
                 <p className="text-center text-white">+62 857 2233 8836</p>
                 <p className="text-center text-white">OR</p>
                 <p className="text-center text-white">abeangels@gmail.com</p>
               </div>
               <div className="flex items-center justify-center gap-4 mt-8">
-                <a>
+                <a href="https://www.twitter.com/shin_abe" target="_blank">
                   <svg
                     width="29"
                     height="29"
@@ -31,7 +36,10 @@ export default function Footer() {
                     />
                   </svg>
                 </a>
-                <a>
+                <a
+                  href="https://www.facebook.com/shinabedesign"
+                  target="_blank"
+                >
                   <svg
                     width="29"
                     height="30"
@@ -52,7 +60,7 @@ export default function Footer() {
                     />
                   </svg>
                 </a>
-                <a>
+                <a href="https://www.instagram.com/shin_abe" target="_blank">
                   <svg
                     width="29"
                     height="30"
@@ -76,7 +84,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="bg-[#E570005E] min-h-80 flex items-center justify-center">
-              <img src="/logo.png" alt="logo" className="w-48" />
+              <button className="text-2xl font-semibold">FAQ</button>
             </div>
           </div>
         </div>

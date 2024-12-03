@@ -4,9 +4,18 @@ export default function InstaPhotos() {
       <div className="relative flex">
         <div className="w-20 min-w-20 min-h-full bg-[#ffa500]"></div>
         <div className="relative flex-grow mx-4 my-20">
-          <h2 className="text-center text-2xl text-white md:text-4xl mb-12">
-            Follow us on Instagram (@shin_abe)
-          </h2>
+          <div className="flex justify-center">
+            <div className="mb-12 w-fit">
+              <h2 className="text-center text-2xl text-white md:text-4xl">
+                Follow us on Instagram
+              </h2>
+              <div className="flex justify-end">
+                <a className="text-white underline text-right cursor-pointer">
+                  @shin_abe
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative">
               <img src="/insta-1.png" className="h-[350px] w-full" />
