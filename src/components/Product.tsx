@@ -1,9 +1,33 @@
+// @ts-nocheck
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import { useState } from "react";
+import "react-modern-drawer/dist/index.css";
+import Drawer from "react-modern-drawer";
 export default function Product() {
+  const [isDesignDrawerOpen, setIsDesignDrawerOpen] = useState<boolean>(false);
+  const toggleDesignDrawer = (): void => {
+    setIsDesignDrawerOpen((prevState) => !prevState);
+  };
+  const [isBrifDrawerOpen, setIsBrifDrawerOpen] = useState<boolean>(false);
+  const toggleBrifDrawer = (): void => {
+    setIsBrifDrawerOpen((prevState) => !prevState);
+  };
+  const [isEditDrawerOpen, setIsEditDrawerOpen] = useState<boolean>(false);
+  const toggleEditDrawer = (): void => {
+    setIsEditDrawerOpen((prevState) => !prevState);
+  };
+  const [isDeliDrawerOpen, setIsDeliDrawerOpen] = useState<boolean>(false);
+  const toggleDeliDrawer = (): void => {
+    setIsDeliDrawerOpen((prevState) => !prevState);
+  };
+  const [isPaintDrawerOpen, setIsPaintDrawerOpen] = useState<boolean>(false);
+  const togglePaintDrawer = (): void => {
+    setIsPaintDrawerOpen((prevState) => !prevState);
+  };
   return (
     <>
       <div className="relative flex">
@@ -28,39 +52,41 @@ export default function Product() {
                   />
                 </svg>
               </div>
-              <div className="p-2">
-                <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
-                  Brief
-                </h5>
-                <Disclosure>
-                  <DisclosurePanel className="text-gray-300 mt-2 text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laudantium voluptates itaque veniam? Nulla fugiat aliquam
-                    ullam, magni incidunt aperiam corporis ipsam odio fuga quia.
-                    Ducimus commodi repudiandae tenetur nisi aliquam eaque
-                    beatae iste explicabo aut, repellendus sequi? Adipisci
-                    assumenda, dolore expedita sapiente voluptate ipsum vero
-                    magni temporibus! Asperiores, in odit!
-                  </DisclosurePanel>
-                  <DisclosureButton className="group py-2 flex w-full items-center justify-between">
-                    <div className="flex flex-col">
-                      <p className="text-white text-start text-sm mt-1 group-data-[open]:hidden">
-                        Once we determine the type of helmet you want/need...
-                      </p>
-                      <div>
-                        <button className="border-[2px] flex items-center text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2">
-                          <span className="group-data-[open]:hidden">
-                            Read more
-                          </span>
-                          <span className="hidden group-data-[open]:inline">
-                            Read less
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                  </DisclosureButton>
-                </Disclosure>
+              <div className="p-2 flex flex-col justify-between lg:h-[160px]">
+                <div>
+                  <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
+                    Brief
+                  </h5>
+                  <p className="text-white text-sm mt-1">
+                    Once we determine the type of helmet you want/need...
+                  </p>
+                </div>
+                <div>
+                  <button
+                    onClick={toggleBrifDrawer}
+                    className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2"
+                  >
+                    Read more
+                  </button>
+                </div>
               </div>
+              <Drawer
+                open={isBrifDrawerOpen}
+                onClose={toggleBrifDrawer}
+                direction="bottom"
+              >
+                <div className="bg-[#111111] h-full text-white">
+                  <div className="max-w-7xl mx-auto p-4 lg:px-0">
+                    Once we determine the type of helmet you want/need we can
+                    have a chat to work through your ideas/requirements. Most
+                    important point is colour choices, then elements like
+                    sponsor requirements, names, race numbers etc. There is no
+                    such thing as too much information so anything you want
+                    included needs to be mentioned now, it's very important to
+                    be clear about what you want at this stage of the process.
+                  </div>
+                </div>
+              </Drawer>
             </div>
             <div className="bg-[#111111] p-2 rounded-3xl">
               <div className="relative">
@@ -80,19 +106,40 @@ export default function Product() {
                   />
                 </svg>
               </div>
-              <div className="p-2">
-                <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
-                  Design
-                </h5>
-                <p className="text-white text-sm mt-1">
-                  The design phase generally takes 1-2 weeks...
-                </p>
+              <div className="p-2 flex flex-col justify-between lg:h-[160px]">
                 <div>
-                  <button className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2">
+                  <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
+                    Design
+                  </h5>
+                  <p className="text-white text-sm mt-1">
+                    The design phase generally takes 1-2 weeks...
+                  </p>
+                </div>
+                <div>
+                  <button
+                    onClick={toggleDesignDrawer}
+                    className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2"
+                  >
                     Read more
                   </button>
                 </div>
               </div>
+              <Drawer
+                open={isDesignDrawerOpen}
+                onClose={toggleDesignDrawer}
+                direction="bottom"
+              >
+                <div className="bg-[#111111] h-full text-white">
+                  <div className="max-w-7xl mx-auto p-4 lg:px-0">
+                    he design phase generally takes 1-2 weeks once we have
+                    worked through your brief. Once complete you will receive a
+                    highly detailed side profile of the helmet to review. We do
+                    not accept art from other designers, these can always be
+                    taken into consideration, but you will receive your own,
+                    unique rStar artwork.
+                  </div>
+                </div>
+              </Drawer>
             </div>
             <div className="bg-[#111111] p-2 rounded-3xl">
               <div className="relative">
@@ -112,19 +159,37 @@ export default function Product() {
                   />
                 </svg>
               </div>
-              <div className="p-2">
-                <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
-                  Review/Edit
-                </h5>
-                <p className="text-white text-sm mt-1">
-                  Here you'll have the opportunity to review and make...{" "}
-                </p>
+              <div className="p-2 flex flex-col justify-between lg:h-[160px]">
                 <div>
-                  <button className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2">
+                  <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
+                    Review/Edit
+                  </h5>
+                  <p className="text-white text-sm mt-1">
+                    Here you'll have the opportunity to review and make...{" "}
+                  </p>
+                </div>
+                <div>
+                  <button
+                    onClick={toggleEditDrawer}
+                    className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2"
+                  >
                     Read more
                   </button>
                 </div>
               </div>
+              <Drawer
+                open={isEditDrawerOpen}
+                onClose={toggleEditDrawer}
+                direction="bottom"
+              >
+                <div className="bg-[#111111] h-full text-white">
+                  <div className="max-w-7xl mx-auto p-4 lg:px-0">
+                    Here you'll have the opportunity to review and make minor
+                    adjustments to your design in case we missed anything in the
+                    initial brief.
+                  </div>
+                </div>
+              </Drawer>
             </div>
             <div className="bg-[#111111] p-2 rounded-3xl">
               <div className="relative">
@@ -144,19 +209,40 @@ export default function Product() {
                   />
                 </svg>
               </div>
-              <div className="p-2">
-                <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
-                  Painting
-                </h5>
-                <p className="text-white text-sm mt-1">
-                  Each helmet is meticulously hand painted...{" "}
-                </p>
+              <div className="p-2 flex flex-col justify-between lg:h-[160px]">
                 <div>
-                  <button className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2">
+                  <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
+                    Painting
+                  </h5>
+                  <p className="text-white text-sm mt-1">
+                    Each helmet is meticulously hand painted...{" "}
+                  </p>
+                </div>
+                <div>
+                  <button
+                    onClick={togglePaintDrawer}
+                    className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2"
+                  >
                     Read more
                   </button>
                 </div>
               </div>
+              <Drawer
+                open={isPaintDrawerOpen}
+                onClose={togglePaintDrawer}
+                direction="bottom"
+              >
+                <div className="bg-[#111111] h-full text-white">
+                  <div className="max-w-7xl mx-auto p-4 lg:px-0">
+                    Each helmet is meticulously hand painted with an extreme
+                    amount of attention placed on the smallest of details.
+                    Painting generally takes 3-4 weeks depending on complexity
+                    and workload that the time. Nothing for you to do here,
+                    except be patient and no progress shots!! You'll need to
+                    wait for the surprise.
+                  </div>
+                </div>
+              </Drawer>
             </div>
             <div className="bg-[#111111] p-2 rounded-3xl">
               <div className="relative">
@@ -176,19 +262,38 @@ export default function Product() {
                   />
                 </svg>
               </div>
-              <div className="p-2">
-                <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
-                  Delivery
-                </h5>
-                <p className="text-white text-sm mt-1">
-                  Carefully wrapped and double boxed with plenty...{" "}
-                </p>
+              <div className="p-2 flex flex-col justify-between lg:h-[160px]">
                 <div>
-                  <button className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2">
+                  <h5 className="text-[#ffa500] font-semibold text-xl mt-1">
+                    Delivery
+                  </h5>
+                  <p className="text-white text-sm mt-1">
+                    Carefully wrapped and double boxed with plenty...{" "}
+                  </p>
+                </div>
+                <div>
+                  <button
+                    onClick={toggleDeliDrawer}
+                    className="border-[2px] text-sm border-[#ffa500] text-[#ffa500] rounded-lg mt-3 px-3 py-2"
+                  >
                     Read more
                   </button>
                 </div>
               </div>
+              <Drawer
+                open={isDeliDrawerOpen}
+                onClose={toggleDeliDrawer}
+                direction="bottom"
+              >
+                <div className="bg-[#111111] h-full text-white">
+                  <div className="max-w-7xl mx-auto p-4 lg:px-0">
+                    Carefully wrapped and double boxed with plenty of
+                    protection, your new helmet is now on its way to you. All
+                    Australian orders shipped via Express Post, all
+                    international via FedEx. Pick up is always welcome too!!
+                  </div>
+                </div>
+              </Drawer>
             </div>
           </div>
         </div>

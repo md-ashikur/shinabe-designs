@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       <div className="relative flex">
         <div className="w-20 min-w-20 min-h-full bg-[#ffa500]"></div>
-        <div className="relative flex-grow pe-4 bg-[#ffa500]">
+        <div className="relative flex-grow  bg-[#ffa500]">
           <div className="grid grid-cols-1 md:grid-cols-3 py-8 gap-4">
             <div className="bg-[#E570005E] min-h-80 flex items-center justify-center">
               <img src="/logo.png" alt="logo" className="w-48" />
@@ -88,7 +88,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="w-20 min-h-full min-w-20 hidden xl:block bg-[#ffa500]"></div>
+        <div className="w-20 min-h-full min-w-20 hidden bg-[#ffa500]"></div>
       </div>
     </>
   );

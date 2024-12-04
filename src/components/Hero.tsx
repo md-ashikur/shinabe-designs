@@ -1,38 +1,50 @@
+// @ts-nocheck
+import { useState } from "react";
+import "react-modern-drawer/dist/index.css";
+import Drawer from "react-modern-drawer";
+
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggleDrawer = (): void => {
+    setIsOpen((prevState) => !prevState);
+  };
   return (
     <>
       <div className="relative flex">
         <div className="w-20 min-h-full bg-[#ffa500]">
           <div className="flex flex-col items-center gap-4 mt-20">
-            <button>
+            <button onClick={toggleDrawer}>
               <svg
-                width="38"
-                height="27"
-                viewBox="0 0 38 27"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="size-6 text-white h-8 w-8"
               >
                 <path
-                  d="M1.86072 3.72144H35.3536C35.8471 3.72144 36.3204 3.5254 36.6694 3.17644C37.0183 2.82749 37.2144 2.35421 37.2144 1.86072C37.2144 1.36722 37.0183 0.893944 36.6694 0.544992C36.3204 0.19604 35.8471 0 35.3536 0H1.86072C1.36722 0 0.893944 0.19604 0.544992 0.544992C0.196039 0.893944 0 1.36722 0 1.86072C0 2.35421 0.196039 2.82749 0.544992 3.17644C0.893944 3.5254 1.36722 3.72144 1.86072 3.72144ZM1.86072 11.1643H27.9108C28.4043 11.1643 28.8775 10.9683 29.2265 10.6193C29.5754 10.2704 29.7715 9.79708 29.7715 9.30359C29.7715 8.8101 29.5754 8.33681 29.2265 7.98786C28.8775 7.63891 28.4043 7.44287 27.9108 7.44287H1.86072C1.36722 7.44287 0.893944 7.63891 0.544992 7.98786C0.196039 8.33681 0 8.8101 0 9.30359C0 9.79708 0.196039 10.2704 0.544992 10.6193C0.893944 10.9683 1.36722 11.1643 1.86072 11.1643ZM35.3536 14.8857H1.86072C1.36722 14.8857 0.893944 15.0818 0.544992 15.4307C0.196039 15.7797 0 16.253 0 16.7465C0 17.24 0.196039 17.7132 0.544992 18.0622C0.893944 18.4111 1.36722 18.6072 1.86072 18.6072H35.3536C35.8471 18.6072 36.3204 18.4111 36.6694 18.0622C37.0183 17.7132 37.2144 17.24 37.2144 16.7465C37.2144 16.253 37.0183 15.7797 36.6694 15.4307C36.3204 15.0818 35.8471 14.8857 35.3536 14.8857ZM27.9108 22.3286H1.86072C1.36722 22.3286 0.893944 22.5247 0.544992 22.8736C0.196039 23.2226 0 23.6958 0 24.1893C0 24.6828 0.196039 25.1561 0.544992 25.5051C0.893944 25.854 1.36722 26.05 1.86072 26.05H27.9108C28.4043 26.05 28.8775 25.854 29.2265 25.5051C29.5754 25.1561 29.7715 24.6828 29.7715 24.1893C29.7715 23.6958 29.5754 23.2226 29.2265 22.8736C28.8775 22.5247 28.4043 22.3286 27.9108 22.3286Z"
-                  fill="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                 />
               </svg>
             </button>
-            <a>
+            <button>
               <svg
-                width="35"
-                height="36"
-                viewBox="0 0 35 36"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="size-6 text-white h-8 w-8"
               >
                 <path
-                  d="M7.11628 31.8372C7.11628 32.676 7.4495 33.4805 8.04264 34.0736C8.63578 34.6668 9.44025 35 10.2791 35C11.1179 35 11.9224 34.6668 12.5155 34.0736C13.1086 33.4805 13.4419 32.676 13.4419 31.8372M18.186 31.8372C18.186 32.676 18.5193 33.4805 19.1124 34.0736C19.7055 34.6668 20.51 35 21.3488 35C22.1877 35 22.9921 34.6668 23.5853 34.0736C24.1784 33.4805 24.5116 32.676 24.5116 31.8372M9.48837 10.4884H34V10.8837L33.622 11.3313C29.7804 15.8936 27.6739 21.6664 27.6744 27.6307V27.8837H7.11628V24.9107C7.11628 21.6214 7.01191 18.3353 6.50586 15.0871C5.62977 9.46363 3.69572 1 0 1"
-                  stroke="white"
-                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
                 />
               </svg>
-            </a>
+            </button>
           </div>
           <div className="flex flex-col items-center gap-4 mt-20">
             <a href="https://www.twitter.com/shin_abe" target="_blank">
@@ -140,6 +152,79 @@ export default function Hero() {
               </svg>
             </div>
           </div>
+          <Drawer
+            open={isOpen}
+            onClose={toggleDrawer}
+            direction="left"
+            className="min-w-[350px] md:min-w-[400px] bg-[#ffa500]"
+          >
+            <div className="p-8 bg-[#ffa500] min-h-full text-white">
+              <div className="flex justify-between items-center">
+                <img src="/logo.png" className="w-56" />
+                <button onClick={toggleDrawer}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="mt-8">
+                <ul className="space-y-4 divide-y-2 divide-orange-300">
+                  <li className="text-center text-xl font-semibold uppercase">
+                    Home
+                  </li>
+                  <li className="text-center text-xl font-semibold uppercase pt-4">
+                    Shop
+                  </li>
+                  <li className="text-center text-xl font-semibold uppercase pt-4">
+                    About Us
+                  </li>
+                  <li className="text-center text-xl font-semibold uppercase pt-4">
+                    Portfolio
+                  </li>
+                  <li className="text-center text-xl font-semibold uppercase pt-4">
+                    Gallery
+                  </li>
+                  <li className="text-center text-xl font-semibold uppercase pt-4">
+                    Testimonials
+                  </li>
+                  <li className="text-center text-xl font-semibold uppercase pt-4">
+                    Contact
+                  </li>
+                </ul>
+                <div className="flex justify-between border border-orange-300 p-3 mt-8">
+                  <input
+                    placeholder="Search here..."
+                    className="bg-transparent flex-grow outline-none placeholder-orange-300"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </Drawer>
         </div>
         <div className="w-20 min-h-full bg-black hidden xl:block"></div>
       </div>
