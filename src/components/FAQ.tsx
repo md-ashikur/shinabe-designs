@@ -9,7 +9,7 @@ export default function FAQ() {
   return (
     <>
       <div className="relative flex">
-        <div className="w-20 min-w-20 min-h-full bg-[#ffa500]"></div>
+        <div className="w-16 min-w-16 min-h-full bg-[#ffa500]"></div>
         <div className="relative flex-grow mx-8 mb-8">
           <h2 className="text-center text-white text-2xl md:text-4xl mb-12">
             Frequently asked questions
@@ -162,7 +162,7 @@ export default function FAQ() {
             </div>
           </div>
         </div>
-        <div className="w-20 min-h-full min-w-20 bg-black hidden xl:block"></div>
+        <div className="w-16 min-h-full min-w-16 bg-black hidden xl:block"></div>
       </div>
     </>
   );

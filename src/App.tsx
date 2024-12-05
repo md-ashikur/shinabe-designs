@@ -10,7 +10,7 @@ import ProductCarousel from "./components/ProductCarousel";
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-[#ffa500]">
+      <div className="min-h-screen bg[#ffa500]">
         <div className="max-w-7xl mx-auto bg-black min-h-screen">
           <Hero />
           <AboutMe />

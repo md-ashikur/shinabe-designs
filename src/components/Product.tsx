@@ -31,7 +31,7 @@ export default function Product() {
   return (
     <>
       <div className="relative flex">
-        <div className="w-20 min-w-20 min-h-full bg-[#ffa500]"></div>
+        <div className="w-16 min-w-16 min-h-full bg-[#ffa500]"></div>
         <div className="relative flex-grow mx-8 mb-20">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5  gap-4">
             <div className="bg-[#111111] p-2 rounded-3xl">
@@ -297,7 +297,7 @@ export default function Product() {
             </div>
           </div>
         </div>
-        <div className="w-20 h-full min-w-20 bg-black hidden xl:block"></div>
+        <div className="w-16 h-full min-w-16 bg-black hidden xl:block"></div>
       </div>
     </>
   );

@@ -70,7 +70,7 @@ export default function ProductCarousel() {
   return (
     <>
       <div className="relative flex h-96">
-        <div className="w-20 min-w-20 min-h-full bg-[#ffa500]"></div>
+        <div className="w-16 min-w-16 min-h-full bg-[#ffa500]"></div>
         <div
           className="relative xl:hidden flex-grow  text-white bg-red-400 pb-20"
           style={{
@@ -183,9 +183,9 @@ export default function ProductCarousel() {
                           width: "100%",
                         }}
                       >
-                        <div className="space-y-4">
-                          <p className="text-xs">Helmet Portfolio</p>
-                          <p className="text-2xl">{item.name}</p>
+                        <div className="space-y-4 ms-8">
+                          <p className="text-xl">Helmet Portfolio</p>
+                          <p className="text-4xl">{item.name}</p>
                           <button className="px-3 py-2 rounded-md bg-[#ffa500]">
                             Order Helmet
                           </button>
