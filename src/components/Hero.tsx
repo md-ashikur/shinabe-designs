@@ -108,16 +108,16 @@ export default function Hero() {
         </div>
         <div className="relative flex-grow pb-20">
           <div className="absolute top-8 left-8">
-            <img src="/logo.png" alt="logo" />
+            <img src="/logo.png" alt="logo" className="w-44" />
           </div>
           <div>
             <div className="grid grid-cols-4 gap-2 mx-auto w-52">
-              <div className="h-60 bg-[#ffa500]"></div>
-              <div className="h-60 bg-[#ffa500]"></div>
-              <div className="h-60 bg-[#ffa500]"></div>
-              <div className="h-60 bg-[#ffa500]"></div>
+              <div className="h-80 bg-[#ffa500]"></div>
+              <div className="h-80 bg-[#ffa500]"></div>
+              <div className="h-80 bg-[#ffa500]"></div>
+              <div className="h-80 bg-[#ffa500]"></div>
             </div>
-            <div className="-mt-14 relative">
+            <div className="-mt-36 relative">
               <svg
                 width="348"
                 height="112"
@@ -136,7 +136,7 @@ export default function Hero() {
                   fill="#FF0000"
                 />
               </svg>
-              <img src="/helmet.png" className="mx-auto" alt="helmet" />
+              <img src="/helmet.png" className="mx-auto w-60" alt="helmet" />
               <svg
                 width="348"
                 height="133"

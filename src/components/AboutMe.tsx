@@ -3,7 +3,7 @@ export default function AboutMe() {
     <>
       <div className="relative flex">
         <div className="w-20 min-w-20 min-h-full bg-[#ffa500]"></div>
-        <div className="relative flex-grow mx-4 mb-20">
+        <div className="relative flex-grow mx-8 mb-20">
           <h2 className="text-center text-white text-4xl mb-12">About Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>

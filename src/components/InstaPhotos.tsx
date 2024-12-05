@@ -3,26 +3,30 @@ export default function InstaPhotos() {
     <>
       <div className="relative flex">
         <div className="w-20 min-w-20 min-h-full bg-[#ffa500]"></div>
-        <div className="relative flex-grow mx-4 my-20">
+        <div className="relative flex-grow mx-8 my-20">
           <div className="flex justify-center">
             <div className="mb-12 w-fit">
               <h2 className="text-center text-2xl text-white md:text-4xl">
                 Follow us on Instagram
               </h2>
               <div className="flex justify-end">
-                <a className="text-white underline text-right cursor-pointer">
+                <a
+                  href="https://www.instagram.com/shin_abe"
+                  target="_blank"
+                  className="text-white underline text-right cursor-pointer"
+                >
                   @shin_abe
                 </a>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="relative">
-              <img src="/insta-1.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-1.jpg" className="h-[350px] w-full" />
               <svg
                 width="24"
                 height="24"
@@ -37,13 +41,14 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
-            <div className="relative">
-              <img src="/insta-2.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+            </a>
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-2.jpg" className="h-[350px] w-full" />
+
               <svg
                 width="24"
                 height="24"
@@ -58,13 +63,14 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
-            <div className="relative">
-              <img src="/insta-3.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+            </a>
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-3.jpg" className="h-[350px] w-full" />
+
               <svg
                 width="24"
                 height="24"
@@ -79,13 +85,14 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
-            <div className="relative">
-              <img src="/insta-4.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+            </a>
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-4.jpg" className="h-[350px] w-full" />
+
               <svg
                 width="24"
                 height="24"
@@ -100,13 +107,14 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
-            <div className="relative">
-              <img src="/insta-5.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+            </a>
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-5.jpg" className="h-[350px] w-full" />
+
               <svg
                 width="24"
                 height="24"
@@ -121,13 +129,14 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
-            <div className="relative">
-              <img src="/insta-6.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+            </a>
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-6.jpg" className="h-[350px] w-full" />
+
               <svg
                 width="24"
                 height="24"
@@ -142,13 +151,14 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
-            <div className="relative">
-              <img src="/insta-7.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+            </a>
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-7.jpg" className="h-[350px] w-full" />
+
               <svg
                 width="24"
                 height="24"
@@ -163,13 +173,14 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
-            <div className="relative">
-              <img src="/insta-8.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+            </a>
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-8.jpg" className="h-[350px] w-full" />
+
               <svg
                 width="24"
                 height="24"
@@ -184,13 +195,14 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
-            <div className="relative">
-              <img src="/insta-9.png" className="h-[350px] w-full" />
-              <img
-                src="/logo.png"
-                className="absolute w-40 top-4 left-4 md:top-8 md:left-8 h-12"
-              />
+            </a>
+            <a
+              href="https://www.instagram.com/shin_abe"
+              target="_blank"
+              className="relative"
+            >
+              <img src="/insta-9.jpg" className="h-[350px] w-full" />
+
               <svg
                 width="24"
                 height="24"
@@ -205,7 +217,7 @@ export default function InstaPhotos() {
                   fill-opacity="0.9"
                 />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
         <div className="w-20 min-h-full min-w-20 bg-black hidden xl:block"></div>

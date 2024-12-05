@@ -10,7 +10,7 @@ export default function FAQ() {
     <>
       <div className="relative flex">
         <div className="w-20 min-w-20 min-h-full bg-[#ffa500]"></div>
-        <div className="relative flex-grow mx-4 mb-4">
+        <div className="relative flex-grow mx-8 mb-8">
           <h2 className="text-center text-white text-2xl md:text-4xl mb-12">
             Frequently asked questions
           </h2>
