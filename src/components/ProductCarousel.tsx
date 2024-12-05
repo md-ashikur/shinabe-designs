@@ -16,52 +16,52 @@ interface PType {
 
 const products: PType[] = [
   {
-    id: 1,
+    id: 0,
     name: "Bubba Wallace",
     image: "/helmet/Bubba-Wallace-1.png",
   },
   {
-    id: 2,
+    id: 1,
     name: "Morris Chen Hub Auto",
     image: "/helmet/Morris-Chen-Hub-Auto-10.png",
   },
   {
-    id: 3,
+    id: 2,
     name: "Noah Lisle",
     image: "/helmet/Noah-Lisle-9.png",
   },
   {
-    id: 4,
+    id: 3,
     name: "Rick Kelly",
     image: "/helmet/Rick-Kelly-2020-8.png",
   },
   {
-    id: 5,
+    id: 4,
     name: "Scott McLaughlin",
     image: "/helmet/Scott-McLaughlin-7.png",
   },
   {
-    id: 6,
+    id: 5,
     name: "Stephen Grove",
     image: "/helmet/Stephen-Grove-6.png",
   },
   {
-    id: 7,
+    id: 6,
     name: "Tony Walls",
     image: "/helmet/Tony-Walls-5.png",
   },
   {
-    id: 8,
+    id: 7,
     name: "Travis Buckley",
     image: "/helmet/Travis-Buckley-4.png",
   },
   {
-    id: 9,
+    id: 8,
     name: "Tyler Everingham",
     image: "/helmet/Tyler-Everingham-3.png",
   },
   {
-    id: 10,
+    id: 9,
     name: "Will Rodgers",
     image: "/helmet/Will-Rodgers-2.png",
   },
