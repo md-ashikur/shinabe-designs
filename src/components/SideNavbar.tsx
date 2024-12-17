@@ -1,13 +1,54 @@
-// @ts-nocheck
-import { useState } from "react";
+
 import "react-modern-drawer/dist/index.css";
 import Drawer from "react-modern-drawer";
-
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { HiOutlineShoppingCart } from "react-icons/hi2";
+import { useState, useEffect } from "react";
 export default function Hero() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleDrawer = (): void => {
     setIsOpen((prevState) => !prevState);
   };
+
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  // Scroll event listener to update the active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const about = document.getElementById("about");
+      const portfolio = document.getElementById("portfolio");
+      const contact = document.getElementById("contact");
+      const shop = document.getElementById("shop");
+  
+      const scrollY = window.scrollY + window.innerHeight / 2; // Center-based scroll detection
+  
+      if (contact && scrollY >= contact.offsetTop) {
+        setActiveSection("contact");
+      } else if (shop && scrollY >= shop.offsetTop) {
+        setActiveSection("shop");
+      } else if (portfolio && scrollY >= portfolio.offsetTop) {
+        setActiveSection("portfolio");
+      } else if (about && scrollY >= about.offsetTop) {
+        setActiveSection("about");
+      } else {
+        setActiveSection("");
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+
+  // Smooth scroll to section
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="relative flex">
@@ -29,80 +70,22 @@ export default function Hero() {
                 />
               </svg>
             </button>
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="size-6 text-white h-8 w-8"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                />
-              </svg>
+            <button  onClick={() => scrollToSection("shop")}
+          className={`text-4xl text-white pt-4 cursor-pointer ${
+            activeSection === "shop" ? "!text-orange-500" : ""
+          }`}>
+            <HiOutlineShoppingCart />
             </button>
           </div>
-          <div className="flex flex-col items-center gap-4 mt-20">
+          <div className="flex flex-col text-4xl text-white items-center gap-4 mt-20">
             <a href="https://www.twitter.com/shin_abe" target="_blank">
-              <svg
-                width="29"
-                height="29"
-                viewBox="0 0 29 29"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="29" height="29" rx="14.5" fill="white" />
-                <path
-                  d="M20.8824 10.6858C20.8824 10.8431 20.8824 10.969 20.8824 11.1263C20.8824 15.5002 17.5784 20.5035 11.5053 20.5035C9.61724 20.5035 7.88656 19.9685 6.43907 19.0245C6.69081 19.056 6.94255 19.0875 7.22575 19.0875C8.76763 19.0875 10.1836 18.5525 11.3165 17.6714C9.86898 17.64 8.64176 16.696 8.23269 15.3743C8.45296 15.4058 8.64176 15.4373 8.86203 15.4373C9.14524 15.4373 9.45991 15.3743 9.71164 15.3114C8.20123 14.9967 7.06841 13.6751 7.06841 12.0703V12.0388C7.50895 12.2906 8.04389 12.4164 8.57883 12.4479C7.66629 11.85 7.09988 10.8431 7.09988 9.71029C7.09988 9.08095 7.25722 8.51454 7.54042 8.04254C9.1767 10.025 11.6311 11.3466 14.3688 11.5039C14.3058 11.2522 14.2744 11.0004 14.2744 10.7487C14.2744 8.92361 15.7533 7.44466 17.5784 7.44466C18.5224 7.44466 19.372 7.82227 20.0014 8.48307C20.7251 8.32574 21.4488 8.04254 22.0782 7.66493C21.8264 8.45161 21.323 9.08095 20.6307 9.49002C21.2915 9.42708 21.9523 9.23828 22.5187 8.98655C22.0782 9.64735 21.5118 10.2138 20.8824 10.6858Z"
-                  fill="#FFA500"
-                />
-              </svg>
+            <AiFillTwitterCircle />
             </a>
             <a href="https://www.facebook.com/shinabedesign" target="_blank">
-              <svg
-                width="29"
-                height="30"
-                viewBox="0 0 29 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  y="0.111084"
-                  width="29"
-                  height="29"
-                  rx="14.5"
-                  fill="white"
-                />
-                <path
-                  d="M18.2392 15.0764H15.8792V22.125H12.7325V15.0764H10.1522V12.1814H12.7325V9.94724C12.7325 7.42988 14.2429 6.01386 16.54 6.01386C17.6413 6.01386 18.8056 6.23413 18.8056 6.23413V8.72003H17.5155C16.2568 8.72003 15.8792 9.47523 15.8792 10.2934V12.1814H18.6797L18.2392 15.0764Z"
-                  fill="#FFA500"
-                />
-              </svg>
+            <FaFacebook />
             </a>
             <a href="https://www.instagram.com/shin_abe" target="_blank">
-              <svg
-                width="29"
-                height="30"
-                viewBox="0 0 29 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  y="0.222168"
-                  width="29"
-                  height="29"
-                  rx="14.5"
-                  fill="white"
-                />
-                <path
-                  d="M14.5 10.5618C16.4824 10.5618 18.1187 12.1981 18.1187 14.1805C18.1187 16.1944 16.4824 17.7992 14.5 17.7992C12.4861 17.7992 10.8813 16.1944 10.8813 14.1805C10.8813 12.1981 12.4861 10.5618 14.5 10.5618ZM14.5 16.5405C15.7901 16.5405 16.8286 15.5021 16.8286 14.1805C16.8286 12.8904 15.7901 11.8519 14.5 11.8519C13.1784 11.8519 12.14 12.8904 12.14 14.1805C12.14 15.5021 13.2099 16.5405 14.5 16.5405ZM19.0942 10.4359C19.0942 10.9079 18.7166 11.2855 18.2446 11.2855C17.7726 11.2855 17.395 10.9079 17.395 10.4359C17.395 9.96392 17.7726 9.58632 18.2446 9.58632C18.7166 9.58632 19.0942 9.96392 19.0942 10.4359ZM21.4857 11.2855C21.5486 12.4498 21.5486 15.9427 21.4857 17.1069C21.4227 18.2397 21.171 19.2152 20.3529 20.0648C19.5347 20.883 18.5278 21.1347 17.395 21.1976C16.2307 21.2606 12.7378 21.2606 11.5736 21.1976C10.4408 21.1347 9.46528 20.883 8.61567 20.0648C7.79753 19.2152 7.54579 18.2397 7.48286 17.1069C7.41992 15.9427 7.41992 12.4498 7.48286 11.2855C7.54579 10.1527 7.79753 9.14578 8.61567 8.32764C9.46528 7.50949 10.4408 7.25776 11.5736 7.19482C12.7378 7.13189 16.2307 7.13189 17.395 7.19482C18.5278 7.25776 19.5347 7.50949 20.3529 8.32764C21.171 9.14578 21.4227 10.1527 21.4857 11.2855ZM19.9753 18.3341C20.3529 17.4216 20.2585 15.2189 20.2585 14.1805C20.2585 13.1736 20.3529 10.9709 19.9753 10.0269C19.7235 9.42898 19.2515 8.92551 18.6536 8.70524C17.7096 8.32764 15.5069 8.42204 14.5 8.42204C13.4616 8.42204 11.2589 8.32764 10.3464 8.70524C9.71701 8.95698 9.24501 9.42898 8.99327 10.0269C8.61567 10.9709 8.71007 13.1736 8.71007 14.1805C8.71007 15.2189 8.61567 17.4216 8.99327 18.3341C9.24501 18.9635 9.71701 19.4355 10.3464 19.6872C11.2589 20.0648 13.4616 19.9704 14.5 19.9704C15.5069 19.9704 17.7096 20.0648 18.6536 19.6872C19.2515 19.4355 19.755 18.9635 19.9753 18.3341Z"
-                  fill="#FFA500"
-                />
-              </svg>
+            <FaInstagram className="p-2 bg-white text-[#FFA500] rounded-full" />
             </a>
           </div>
         </div>
@@ -180,54 +163,37 @@ export default function Hero() {
                 </button>
               </div>
               <div className="mt-8">
-                <ul className="space-y-4 divide-y-2 divide-orange-300">
-                  <li className="text-center text-xl font-semibold uppercase">
-                    Home
-                  </li>
-                  <li className="text-center text-xl font-semibold uppercase pt-4">
-                    Shop
-                  </li>
-                  <li className="text-center text-xl font-semibold uppercase pt-4">
-                    About Us
-                  </li>
-                  <li className="text-center text-xl font-semibold uppercase pt-4">
-                    Portfolio
-                  </li>
-                  <li className="text-center text-xl font-semibold uppercase pt-4">
-                    Gallery
-                  </li>
-                  <li className="text-center text-xl font-semibold uppercase pt-4">
-                    Testimonials
-                  </li>
-                  <li className="text-center text-xl font-semibold uppercase pt-4">
-                    Contact
-                  </li>
-                </ul>
-                <div className="flex justify-between border border-orange-300 p-3 mt-8">
-                  <input
-                    placeholder="Search here..."
-                    className="bg-transparent flex-grow outline-none placeholder-orange-300"
-                  />
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                    />
-                  </svg>
-                </div>
-              </div>
+      <ul className="space-y-4 divide-y-2 divide-orange-300">
+        <li
+          onClick={() => scrollToSection("about")}
+          className={`text-center text-xl font-semibold uppercase pt-4 cursor-pointer ${
+            activeSection === "about" ? "text-orange-500" : ""
+          }`}
+        >
+          About Us
+        </li>
+        <li
+          onClick={() => scrollToSection("portfolio")}
+          className={`text-center text-xl font-semibold uppercase pt-4 cursor-pointer ${
+            activeSection === "portfolio" ? "text-orange-500" : ""
+          }`}
+        >
+          Portfolio
+        </li>
+        <li
+          onClick={() => scrollToSection("contact")}
+          className={`text-center text-xl font-semibold uppercase pt-4 cursor-pointer ${
+            activeSection === "contact" ? "text-orange-500" : ""
+          }`}
+        >
+          Contact
+        </li>
+      </ul>
+    </div>
             </div>
           </Drawer>
         </div>
-        <div className="w-16 min-h-full bg-black hidden xl:block"></div>
+     
       </div>
     </>
   );

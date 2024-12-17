@@ -1,13 +1,12 @@
 export default function AboutMe() {
   return (
     <>
-      <div className="relative flex">
-        <div className="w-16 min-w-16 min-h-full bg-[#ffa500]"></div>
+      <div id="about" className="ml-16 py-10"> 
         <div className="relative flex-grow mx-8 mb-20">
           <h2 className="text-center text-white text-4xl mb-12">About Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <p className="text-white">
+         
+              <p className="text-white text-justify">
                 <span className="text-[#ffa500]">Shinabe Design</span> has known
                 with “premium designs & custom paint” with affordable custom
                 price in the motorcycle helmet market-a credential that hundreds
@@ -22,9 +21,9 @@ export default function AboutMe() {
                 utilizing a sophisticated process that involves 5 expert people
                 for each and every helmet.
               </p>
-            </div>
-            <div>
-              <p className="text-white">
+          
+           
+              <p className="text-white text-justify">
                 <span className="text-[#ffa500]">Shinabe Design</span> prides
                 itself in building the very best custom paint that our
                 state-of-the-art handmade & technologies will allow, but we also
@@ -38,10 +37,9 @@ export default function AboutMe() {
                 are put through the ringer, resulting in the fine-art
                 masterpieces that await you.
               </p>
-            </div>
+           
           </div>
         </div>
-        <div className="w-16 min-h-full min-w-16 bg-black hidden xl:block"></div>
       </div>
     </>
   );

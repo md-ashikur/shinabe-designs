@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <div className="relative flex">
+      <div id="contact" className="relative flex">
         <div className="w-16 min-w-16 min-h-full bg-[#ffa500]"></div>
         <div className="relative flex-grow  bg-[#ffa500]">
           <div className="grid grid-cols-1 md:grid-cols-3 py-8 gap-4">
@@ -83,8 +83,9 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="bg-[#E570005E] min-h-80 flex items-center justify-center">
-              <button className="text-2xl font-semibold">FAQ</button>
+            <div className="bg-[#E570005E] min-h-80 flex flex-col items-center justify-center text-center text-white p-5">
+              <h3 className="font-bold">QUALITY DOES MATTER</h3>
+              <p>Every our products today is still handmade in <b>Indonesia</b> utilizing a sophisticated process that involves 5 people for each and every helmet.</p>
             </div>
           </div>
         </div>
