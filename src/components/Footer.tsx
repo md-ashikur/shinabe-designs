@@ -85,7 +85,7 @@ export default function Footer() {
             </div>
             <div className="bg-[#E570005E] min-h-80 flex flex-col items-center justify-center text-center text-white p-5">
               <h3 className="font-bold">QUALITY DOES MATTER</h3>
-              <p>Every our products today is still handmade in <b>Indonesia</b> utilizing a sophisticated process that involves 5 people for each and every helmet.</p>
+              <p>Every our products today is still handmade in <span className="font-bold">Indonesia</span> utilizing a sophisticated process that involves 5 people for each and every helmet.</p>
             </div>
           </div>
         </div>

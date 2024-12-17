@@ -1,8 +1,7 @@
 
 import "react-modern-drawer/dist/index.css";
 import Drawer from "react-modern-drawer";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { useState, useEffect } from "react";
 export default function Hero() {
@@ -77,15 +76,15 @@ export default function Hero() {
             <HiOutlineShoppingCart />
             </button>
           </div>
-          <div className="flex flex-col text-4xl text-white items-center gap-4 mt-20">
+          <div className="flex flex-col text-white items-center gap-4 mt-20">
             <a href="https://www.twitter.com/shin_abe" target="_blank">
-            <AiFillTwitterCircle />
+            <FaTwitter className="w-9 h-9 p-2 bg-white text-[#FFA500] rounded-full"/>
             </a>
             <a href="https://www.facebook.com/shinabedesign" target="_blank">
-            <FaFacebook />
+            <FaFacebookF className="w-9 h-9 p-2 bg-white text-[#FFA500] rounded-full"/>
             </a>
             <a href="https://www.instagram.com/shin_abe" target="_blank">
-            <FaInstagram className="p-2 bg-white text-[#FFA500] rounded-full" />
+            <FaInstagram className="w-9 h-9 p-2 bg-white text-[#FFA500] rounded-full" />
             </a>
           </div>
         </div>

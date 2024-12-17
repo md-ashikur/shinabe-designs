@@ -3,7 +3,7 @@ export default function InstaPhotos() {
     <>
       <div className="relative flex">
         <div className="w-16 min-w-16 min-h-full bg-[#ffa500]"></div>
-        <div className="relative flex-grow mx-8 my-20 mt-28">
+        <div className="relative flex-grow mx-8 mb-20 mt-5 ">
           <div className="flex justify-center">
             <div className="mb-12 w-fit">
               <h2 className="text-center text-2xl text-white md:text-4xl">

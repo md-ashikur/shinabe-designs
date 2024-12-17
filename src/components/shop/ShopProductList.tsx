@@ -5,7 +5,7 @@ import { Product } from "./ShopProduct";
 const products: Product[] = [
   {
     id: 1,
-    image: "../../../public/images/Helmets/Stilo ST5 FN Composite Helmet.png", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Stilo ST5 FN Composite Helmet.png",
     name: "STILO ST5 FN COMPOSITE HELMET",
     sizes: ["L", "M", "S", "XL", "XS", "XXL"],
     price: "999.00",
@@ -13,7 +13,7 @@ const products: Product[] = [
   },
   {
     id: 2,
-    image: "../../../public/images/Helmets/Stilo ST5 FN CMR Helmet.png", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Stilo ST5 FN CMR Helmet.png", 
     name: "STILO ST5 FN CMR HELMET",
     sizes: ["L", "M", "S", "XS"],
     price: "999.00",
@@ -21,7 +21,7 @@ const products: Product[] = [
   },
   {
     id: 3,
-    image: "../../../public/images/Helmets/Stilo ST5 FN Carbon Helmet.png", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Stilo ST5 FN Carbon Helmet.png", 
     name: "STILO ST5 FN CARBON HELMET",
     sizes: ["L", "M", "S", "XL", "XS", "XXL"],
     price: "999.00",
@@ -29,7 +29,7 @@ const products: Product[] = [
   },
   {
     id: 4,
-    image: "../../../public/images/Helmets/Stilo ST5 FN 8860 Helmet.png", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Stilo ST5 FN 8860 Helmet.png", 
     name: "Stilo ST5 FN 8860 Helmet",
     sizes: ["L", "M", "S", "XL", "XS", "XXL"],
     price: "999.00",
@@ -37,7 +37,7 @@ const products: Product[] = [
   },
   {
     id: 5,
-    image: "../../../public/images/Helmets/Arai SK6.png", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Arai SK6.png", 
     name: "Arai SK6",
     sizes: ["L", "M", "S", "XS"],
     price: "999.00",
@@ -45,7 +45,7 @@ const products: Product[] = [
   },
   {
     id: 6,
-    image: "../../../public/images/Helmets/Arai GP7 SRC.jpg", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Arai GP7 SRC.jpg", 
     name: "Arai GP7 SRC",
     sizes: ["L", "M", "S", "XL", "XS", "XXL"],
     price: "999.00",
@@ -53,7 +53,7 @@ const products: Product[] = [
   },
   {
     id: 7,
-    image: "../../../public/images/Helmets/Arai GP7 FRP.jpg", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Arai GP7 FRP.jpg", 
     name: "Arai GP7 FRP",
     sizes: ["L", "M", "S", "XS"],
     price: "999.00",
@@ -61,7 +61,7 @@ const products: Product[] = [
   },
   {
     id: 8,
-    image: "../../../public/images/Helmets/Arai GP6S.png", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Arai GP6S.png", 
     name: "Arai GP6S",
     sizes: ["L", "M", "S", "XL", "XS", "XXL"],
     price: "999.00",
@@ -69,7 +69,7 @@ const products: Product[] = [
   },
   {
     id: 9,
-    image: "../../../public/images/Helmets/Arai CK6 Helmet.jpg", // Replace with actual helmet image URL
+    image: "../../../public/images/Helmets/Arai CK6 Helmet.jpg", 
     name: "Arai CK6 Helmet",
     sizes: ["L", "M", "S", "XL", "XS", "XXL"],
     price: "999.00",
